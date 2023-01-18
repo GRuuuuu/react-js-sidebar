@@ -1,0 +1,49 @@
+import React, { useEffect } from 'react';
+import { ListItemButton, ListItemIcon, ListItemText, Typography  } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import colorConfigs from "../../configs/colorConfigs";
+import { setNavClick } from '../../lib/reducers/navReducer';
+
+
+const SidebarChildItem = (item, index) => {
+  const dispatch = useDispatch();
+  const navClick = useSelector(state => state.navClick);
+  const config = useSelector(state => state.config);
+
+  const content = item.item;
+
+  useEffect(() => {
+    //Initial rendering
+  }, []);
+
+  return (
+      <ListItemButton
+        component={Link}
+        to={content.to}
+        sx={{
+          "&: hover": {
+            backgroundColor: colorConfigs(config).sidebar.hoverBg
+          },
+          //Change backgroundcolor when it is clicked
+          backgroundColor: navClick.clicked === content.id ? colorConfigs(config).sidebar.activeBg : "unset",
+          //클릭하면 양옆 회색실선 + 왼쪽 찐보라 마커
+          boxShadow: navClick.clicked === content.id ? `inset -1px 0 0 ${colorConfigs(config).sidebar.shadow}, inset 5px 0 0 ${colorConfigs(config).sidebar.border}`: "unset",
+          paddingY: "5px",
+          paddingX: "40px",
+        }}
+        onClick={()=>{dispatch(setNavClick(content.id));}}
+      >
+        <ListItemText
+          disableTypography
+          primary={
+            <Typography variant="body2">
+              {content.display}
+            </Typography>
+          }
+        />
+      </ListItemButton>
+  );
+};
+
+export default SidebarChildItem;
