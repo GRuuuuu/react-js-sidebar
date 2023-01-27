@@ -1,3 +1,6 @@
 # react-js-sidebar
 
-![](https://user-images.githubusercontent.com/15958325/54878480-05609f00-4e71-11e9-8bf2-1ffbccd927cb.png)
+>inspired by [trananhtuat's sidebar](https://github.com/trananhtuat/react-sidebar-with-dropdown)  
+
+![image](https://user-images.githubusercontent.com/15958325/215023759-5f48e2a0-3f90-4ca5-8d24-16cad57346d9.png)  
+

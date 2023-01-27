@@ -1,12 +1,6 @@
-/**
- * Reducer for color theme
- * @author CE Korea
- */
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  //theme: 'g100',
   theme: 'light',
 };
 

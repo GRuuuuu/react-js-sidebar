@@ -41,21 +41,33 @@ const Topbar = () => {
           />
         </Search>
 
-        <Button variant="outlined" 
+        <Button 
           href="/"  
           target="_blank" 
-          color="inherit"
-          size="small"
-          sx={{ marginRight: '30px' }}
+          sx={{ 
+            marginRight: '30px', 
+            background: colorConfigs(colorConfig).topbar.btn.bg, 
+            border:`0.5px solid ${colorConfigs(colorConfig).topbar.btn.border}`,
+            color: colorConfigs(colorConfig).topbar.btn.font,
+            '&:hover': {
+              backgroundColor: colorConfigs(colorConfig).topbar.btn.hover,
+            },
+          }}
           >
           Btn1
         </Button>
-        <Button variant="outlined" 
+        <Button 
           href="/"  
           target="_blank" 
-          color="inherit"
-          size="small"
-          sx={{ marginRight: '20px' }}
+          sx={{ 
+            marginRight: '20px', 
+            background: colorConfigs(colorConfig).topbar.btn.bg, 
+            border:`0.5px solid ${colorConfigs(colorConfig).topbar.btn.border}`,
+            color: colorConfigs(colorConfig).topbar.btn.font,
+            '&:hover': {
+              backgroundColor: colorConfigs(colorConfig).topbar.btn.hover,
+            },
+          }}
           >
           Btn2
         </Button>

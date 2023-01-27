@@ -27,6 +27,7 @@ const SidebarItem = (item, index) => {
           },
           //Change backgroundcolor when it is clicked
           backgroundColor: navClick.clicked === content.id ? colorConfigs(config).sidebar.activeBg : "unset",
+          //클릭하면 양옆 회색실선 + 왼쪽 찐보라 마커
           boxShadow: navClick.clicked === content.id ? `inset -1px 0 0 ${colorConfigs(config).sidebar.shadow}, inset 5px 0 0 ${colorConfigs(config).sidebar.border}`: "unset",
           paddingY: "12px",
           paddingX: "24px",

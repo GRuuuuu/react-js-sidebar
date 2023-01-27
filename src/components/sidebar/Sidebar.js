@@ -76,7 +76,7 @@ const Sidebar = () => {
                   </Typography>
               </Stack>
           </Toolbar>
-          <List>
+          <List sx={{padding: '0px'}}>
               {sidebarNavItems.map((item, index) => (
                 item.child? (
                   <SidebarItemCollapse item={item} key={index} />

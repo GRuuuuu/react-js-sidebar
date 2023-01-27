@@ -13,7 +13,13 @@ const colorConfigs = (config)=>(config.theme === 'light'
     },
     topbar: {
       bg: "#ffffff",
-      color: "#491D8B"
+      color: "#491D8B",
+      btn: {
+        bg: "#ffffff",
+        font: "#491D8B",
+        border:"#491D8B",
+        hover:"#F5F5F5"
+      }
     },
     tab:{
       font: "#0F111A",
@@ -35,8 +41,14 @@ const colorConfigs = (config)=>(config.theme === 'light'
       border: "#CDB6EF"
     },
     topbar: {
-      bg: "#0F111A",
-      color: "#a7aab8"
+      bg: "#181A1F",
+      color: "#a7aab8",
+      btn: {
+        bg: "#717CB480",
+        font: "#eeffff",
+        border:"#0F111A",
+        hover:"#292D3E"
+      }
     },
     tab:{
       font: "#eeffff",

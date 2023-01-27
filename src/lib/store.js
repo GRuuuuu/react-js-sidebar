@@ -1,8 +1,3 @@
-/**
- * redux store
- * @author CE Korea
- */
-
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
 import { persistReducer, persistStore } from 'redux-persist';
